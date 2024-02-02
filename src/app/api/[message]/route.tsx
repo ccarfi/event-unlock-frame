@@ -48,19 +48,13 @@ export async function POST(
   const isMember = balances.some((balance) => balance > 0);
 
   if message > 2 {
-    return new Response(
-      `<!DOCTYPE html>
-        <html>
-          <head>
-            <meta property="fc:frame" content="vNext" />
-            <meta property="fc:frame:image" content="${getImage(
-              message,
-              "clear"
-            )}" />
-        </head>
-      </html>`
-    );
-  
+    content = "There are only three buttons."
+    return new ImageResponse(<Message content={content} />, {
+      width: 1200,
+      height: 630,
+    });
+  }
+    
   if (isMember) {
     // We would need to generate a unique URL that renders the image in clear
     // and send that back to the user
