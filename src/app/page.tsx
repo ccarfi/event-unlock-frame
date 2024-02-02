@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default async function Home() {
   return (
     <main className="p-8">
-      <h1 className="text-xl font-bold">Token Gated Frames</h1>
+      <h1 className="text-xl font-bold">Event Unlock Frame</h1>
       <p className="mt-2">
         <Link
           target="_blank"
@@ -32,8 +32,8 @@ export default async function Home() {
           Unlock
         </Link>{" "}
         we built a protocol for membership. You can now{" "}
-        <em>token-gate your frames</em> so that only active members can see
-        their content!
+        <em>share events</em> so that people can register 
+        in frames!
       </p>
       <p className="mt-2">
         <Link
@@ -41,7 +41,7 @@ export default async function Home() {
           className="underline"
           href="https://warpcast.com/julien51.eth/0xa5390f5a"
         >
-          Demo
+          TGF Demo
         </Link>{" "}
         |{" "}
         <Link
@@ -49,7 +49,7 @@ export default async function Home() {
           className="underline"
           href="https://github.com/unlock-protocol/token-gated-frame"
         >
-          Source code
+          Based on Token Gated Frame
         </Link>
       </p>
     </main>

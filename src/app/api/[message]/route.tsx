@@ -3,6 +3,9 @@ import { getUserAddresses, validateMessage } from "@/lib/farcaster";
 import { balanceOf } from "@/lib/unlock";
 import { getImage } from "@/lib/utils";
 import { AppConfig } from "@/app/AppConfig";
+import { Message } from "@/app/Components/Message";
+import { ImageResponse } from "@vercel/og";
+
 
 export async function POST(
   request: Request,
@@ -47,6 +50,14 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
+  if (parseInt(params.message, 10) > 2) {
+     let content: string = "There are only three buttons.";
+     return new ImageResponse(<Message content={content} />, {
+       width: 1200,
+       height: 630,
+    });
+  }
+    
   if (isMember) {
     // We would need to generate a unique URL that renders the image in clear
     // and send that back to the user
