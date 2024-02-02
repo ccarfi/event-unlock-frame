@@ -31,6 +31,8 @@ export async function generateMetadata(
       "fc:frame:image": image,
       "fc:frame:post_url": buttonHandler,
       "fc:frame:button:1": "Reveal 🔓",
+      "fc:frame:button:2": "Reveal 2 🔓",
+      "fc:frame:button:3": "Reveal 3 🔓",
     },
   };
 }
