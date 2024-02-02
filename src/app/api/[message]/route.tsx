@@ -50,14 +50,14 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
-  if (parseInt(id, 10) >= 0) {
- //    let content: string = "There are only three buttons.";
-     let content: string = id;
-     return new ImageResponse(<Message content={content} />, {
-       width: 1200,
-       height: 630,
-    });
+//  if (parseInt(id, 10) >= 0) {
+//    let content: string = "There are only three buttons.";
+  let content: string = message.id;
+  return new ImageResponse(<Message content={content} />, {
+    width: 1200,
+    height: 630,
   }
+  
     
   if (isMember) {
     // We would need to generate a unique URL that renders the image in clear
