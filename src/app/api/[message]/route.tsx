@@ -3,6 +3,8 @@ import { getUserAddresses, validateMessage } from "@/lib/farcaster";
 import { balanceOf } from "@/lib/unlock";
 import { getImage } from "@/lib/utils";
 import { AppConfig } from "@/app/AppConfig";
+import { ImageResponse } from "@vercel/og";
+
 
 export async function POST(
   request: Request,
