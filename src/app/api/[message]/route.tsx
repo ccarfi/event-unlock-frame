@@ -50,13 +50,14 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
+  message.content = message.id;
   return new Response(
     `<!DOCTYPE html>
      <html>
        <head>
          <meta property="fc:frame" content="vNext" />
          <meta property="fc:frame:image" content="${getImage(
-           message.id,
+           message,
            "clear"
          )}" />
          <meta property="fc:frame:button:1" content="Get Membership NFT!" />
