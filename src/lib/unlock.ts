@@ -1,5 +1,7 @@
 import { createPublicClient, http } from "viem";
 
+// This checks to see if someone has a valid membership
+
 export const balanceOf = async (
   user: `0x${string}`,
   contract: `0x${string}`,
