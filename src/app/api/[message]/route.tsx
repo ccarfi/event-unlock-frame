@@ -50,7 +50,7 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
-  message.content = message.id;
+  message.description = message.id;
   return new Response(
     `<!DOCTYPE html>
      <html>
