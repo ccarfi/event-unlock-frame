@@ -1,5 +1,8 @@
 export const getMessage = async (id: string) => {
-  const paywallConfig = {
+
+  // This is the paywall configuration if someone needs to purchase or claim a ticket 
+  
+  const paywallConfig = {  
     pessimistic: true,
     persistentCheckout: true,
     title: "Unlock Community Membership",
@@ -13,6 +16,13 @@ export const getMessage = async (id: string) => {
     metadataInputs: [{ name: "email", type: "email", required: true }],
   };
 
+
+  // This is the "what gets shown" in the frame
+  // Description is the "ungated" piece
+  // Gate is what's checked for current membership
+  // Body is what's shown if the gate is passed
+  // Checkout URL is where they go if they need to get a membership
+  
   return {
     id,
     body: `👏 You're in the secret! 🤫. 
