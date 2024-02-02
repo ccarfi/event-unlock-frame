@@ -50,14 +50,27 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
-//  if (parseInt(id, 10) >= 0) {
-//    let content: string = "There are only three buttons.";
-  let content: string = message.id;
-  return new ImageResponse(<Message content={content} />, {
-    width: 1200,
-    height: 630,
-  });
-  
+  return new Response(
+    `<!DOCTYPE html>
+     <html>
+       <head>
+         <meta property="fc:frame" content="vNext" />
+         <meta property="fc:frame:image" content="${getImage(
+           message.id,
+           "clear"
+         )}" />
+         <meta property="fc:frame:button:1" content="Get Membership NFT!" />
+         <meta property="fc:frame:button:1:action" content="post_redirect" />
+         <meta property="fc:frame:post_url" content="${
+            AppConfig.siteUrl
+          }/api/${message.id}/checkout" />
+        </head>
+      </html>`,
+    {
+     status: 200,
+    }
+  );
+
     
   if (isMember) {
     // We would need to generate a unique URL that renders the image in clear
