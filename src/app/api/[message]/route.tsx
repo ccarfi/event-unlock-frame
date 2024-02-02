@@ -3,6 +3,7 @@ import { getUserAddresses, validateMessage } from "@/lib/farcaster";
 import { balanceOf } from "@/lib/unlock";
 import { getImage } from "@/lib/utils";
 import { AppConfig } from "@/app/AppConfig";
+import { Message } from "@/app/Components/Message";
 import { ImageResponse } from "@vercel/og";
 
 
