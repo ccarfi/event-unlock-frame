@@ -33,11 +33,11 @@ export const getMessage = async (id: string) => {
     `,
     title: `Unlock Community Call — February 7, 2024`,
     description: `You're Invited!
-    
+    <br>
     Unlock Community Call — February 7, 2024
-    
+    <br>
     10am PT / 1pm ET / 5pm GMT
-
+    <br>
     Register to see location
     `,
     gate: {
