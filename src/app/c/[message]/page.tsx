@@ -30,9 +30,9 @@ export async function generateMetadata(
       "fc:frame": "vNext",
       "fc:frame:image": image,
       "fc:frame:post_url": buttonHandler,
-      "fc:frame:button:1": "Reveal 🔓",
-      "fc:frame:button:2": "Reveal 2 🔓",
-      "fc:frame:button:3": "Reveal 3 🔓",
+      "fc:frame:button:1": "Register",
+      "fc:frame:button:2": "See Location",
+      "fc:frame:button:3": "Show My Ticket",
     },
   };
 }
