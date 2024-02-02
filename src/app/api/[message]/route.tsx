@@ -50,9 +50,9 @@ export async function POST(
 
   const isMember = balances.some((balance) => balance > 0);
 
-  if (parseInt(params.message, 10)) {
+  if (parseInt(message.id, 10)) {
  //    let content: string = "There are only three buttons.";
-     let content: string = params.message;
+     let content: string = message.id;
      return new ImageResponse(<Message content={content} />, {
        width: 1200,
        height: 630,
