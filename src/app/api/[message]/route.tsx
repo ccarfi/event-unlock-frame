@@ -56,7 +56,7 @@ export async function POST(
   return new ImageResponse(<Message content={content} />, {
     width: 1200,
     height: 630,
-  }
+  });
   
     
   if (isMember) {
