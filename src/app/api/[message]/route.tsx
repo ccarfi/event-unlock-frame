@@ -49,7 +49,9 @@ export async function POST(
 
   if (message > 2) {
     content = "There are only three buttons."
-    return new ImageResponse(<Message content={content} />, {
+//    return new ImageResponse(<Message content={content} />, {
+    return new ImageResponse(content, {
+
       width: 1200,
       height: 630,
     });
