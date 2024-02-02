@@ -32,7 +32,7 @@ export const getMessage = async (id: string) => {
     This is a token gated frame!
     `,
     title: `Unlock Community Call — February 7, 2024`,
-    description: `You're Invited!
+    description: `{id}You're Invited!
     
     Unlock Community Call — February 7, 2024
 
